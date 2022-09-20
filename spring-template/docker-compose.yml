@@ -1,9 +1,0 @@
-version: "3.0"
-
-services:
-  spring-template:
-    build: 
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - 8080:8080

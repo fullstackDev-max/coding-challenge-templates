@@ -12,12 +12,8 @@ Once you installed Docker and this is your first time using it, we recommend you
 
 https://docs.docker.com/get-started/#start-the-tutorial
 
-# Using our templates
-We recommend to you to download the repository as a ZIP and extract out any of the templated projects to your own workspace. 
-
-Please only include the templated project you are using, do not submit all the templates. For example, if you are building your coding challenge in react, only use the `react-template`. 
-
-Once you've extracted that into your submission repo, cd into the repo and run the following commands:
+# Run - Frontend (React)
+Go to react-template repo and run
 ```
 docker-compose build
 docker-compose up
@@ -55,4 +51,32 @@ hello-world    |
 
 If you need to shut down the project, run `docker-compose down`. 
 
-**Important: It is your responsibility to make sure that after you have implemented your solution, we are still able to run your submission following these same steps. Feel free to modify the docker files as necessary or update your submission README with any additional steps we may need to do to run your submission. Submissions that cannot be run will not be graded!**
+# Run - Backend (Node + Express)
+
+Go to express-template repo and run
+```
+docker-compose build
+docker-compose up
+```
+
+You should see something like
+
+```
+Listening on 8080. Ctrl+c to stop this server.
+```
+
+## API Reference
+
+#### Post: Notify Supervisor
+
+```http
+  POST /api/supervisor/submit
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `firstName` | `string` | **Required**. First Name |
+| `lastName` | `string` | **Required**. Last Name |
+| `supervisor` | `object` | **Required**. Supervisor object |
+| `email` | `string` | email |
+| `phoneNumber` | `string` | phone number |
